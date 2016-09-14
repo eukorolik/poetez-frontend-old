@@ -73,6 +73,10 @@ module.exports = {
       { // JSON loader
         test: /\.json$/,
         loader: 'file-loader?name=[name].[ext]'
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
       }
     ]
   },
@@ -104,21 +108,6 @@ module.exports = {
     minimize: true
   },
   postcss: [
-    require('postcss-import')(),
-    require('postcss-cssnext')({
-      browsers: isLocal
-        ? ['Chrome >= 45']
-        : [
-        'Android 2.3',
-        'Android >= 4',
-        'Chrome >= 20',
-        'Firefox >= 24',
-        'Explorer >= 10',
-        'iOS >= 6',
-        'Opera >= 12',
-        'Safari >= 6'
-      ]
-    }),
     require('postcss-inline-svg')({
       path: 'src/assets/icons',
       encode: false
