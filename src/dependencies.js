@@ -4,4 +4,6 @@ import 'angular-translate';
 import 'angular-translate-loader-static-files';
 import 'angular-local-storage';
 import 'angular-ui-router';
-
+import 'angular-material';
+import 'angular-aria';
+import 'angular-animate';
