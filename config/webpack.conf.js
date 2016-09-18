@@ -81,7 +81,6 @@ module.exports = {
           'pug-loader'
         ]
       }
-
     ]
   },
   plugins: [
