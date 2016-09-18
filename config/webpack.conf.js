@@ -76,8 +76,12 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader'
+        loaders: [
+          'apply-loader',
+          'pug-loader'
+        ]
       }
+
     ]
   },
   plugins: [
