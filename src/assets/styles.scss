@@ -1,15 +1,6 @@
+@import "parts/icons";
+
 body {
   margin: 0;
   background-color: #fafafa;
-}
-
-
-.clearfix:before,
-.clearfix:after {
-  content:"";
-  display:table;
-}
-
-.clearfix:after {
-  clear:both;
 }
