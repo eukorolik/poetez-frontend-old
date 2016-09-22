@@ -9,11 +9,5 @@ md-toolbar.md-hue-2
         i.icon-notification--empty(ng-if="$ctrl.isNotificationEmpty")
         i.icon-notification--unread(ng-if="$ctrl.isNotificationUnread")
         i.icon-notification--disabled(ng-if="$ctrl.isNotificationDisabled")
-md-sidenav.md-sidenav-left(md-component-id='menu-left', md-disable-backdrop='', md-whiteframe='4')
-  md-toolbar.md-hue-2
-    .md-toolbar-tools
-      md-button.md-icon-button(ng-click='$ctrl.toggleMenu()')
-        i.icon-back
-      h1 Menu toolbar
-  md-content(layout-margin='')
+main-menu
 
