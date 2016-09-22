@@ -51,7 +51,19 @@ module.exports = {
           'css?camelCase&modules&localIdentName=[local]__[name]',
           'postcss',
           isLocal ? 'sass' : 'sass?outputStyle=compressed',
-        ]
+        ],
+        include: [srcRoot],
+        exclude: [path.resolve(srcRoot, 'assets')]
+      },
+      { // Scss loader for assets
+        test: /\.scss$/,
+        loaders: [
+          'style',
+          'css',
+          'postcss',
+          isLocal ? 'sass' : 'sass?outputStyle=compressed',
+        ],
+        include: [path.resolve(srcRoot, 'assets')],
       },
       { // HTML loader
         test: /\.html$/,
