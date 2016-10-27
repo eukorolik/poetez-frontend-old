@@ -1,0 +1,123 @@
+@import "../../../assets/parts/toolbar/notification-menu/icons";
+@import "../../../assets/parts/common/icons";
+
+.list {
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  > span, > i {
+    display: block;
+  }
+
+  span:nth-child(1) {
+    flex-grow: 2;
+  }
+}
+
+.span-style {
+  flex-grow: 2;
+}
+
+.icon-style {
+  margin-right: 15px;
+}
+.icon-email {
+  &--unread {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-email-unread);
+      opacity: 0.87;
+    }
+  }
+  &--empty {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-email-empty);
+      opacity: 0.87;
+    }
+  }
+}
+
+.icon-comments {
+  &--unread {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-comments-unread);
+      opacity: 0.87;
+    }
+  }
+  &--empty {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-comments-empty);
+      opacity: 0.87;
+    }
+  }
+}
+
+.icon-notification {
+  &--unread {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-notification-unread);
+      opacity: 0.87;
+    }
+  }
+  &--empty {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-notification-empty);
+      opacity: 0.87;
+    }
+  }
+}
+
+.icon-like {
+  &--unread {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-like-unread);
+      opacity: 0.87;
+    }
+  }
+  &--empty {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-like-empty);
+      opacity: 0.87;
+    }
+  }
+}
+
+.icon-follower {
+  &--unread {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-follower-unread);
+      opacity: 0.87;
+    }
+  }
+  &--empty {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-follower-empty);
+      opacity: 0.87;
+    }
+  }
+}

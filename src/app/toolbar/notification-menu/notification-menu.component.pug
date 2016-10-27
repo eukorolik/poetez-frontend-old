@@ -1,0 +1,33 @@
+md-dialog
+  md-dialog-content
+    md-list(class="{{::$ctrl.styles.list}}")
+      md-list-item.md-2-line(ng-click='null')
+        div(class="{{::$ctrl.styles.listItem}}")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconEmailEmpty}}", ng-if="$ctrl.isNotificationEmpty")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconEmailUnread}}", ng-if="$ctrl.isNotificationUnread")
+          span(class="{{::$ctrl.styles.spanStyle}}") Messages
+          span 1
+      md-list-item.md-2-line(ng-click='null')
+        div(class="{{::$ctrl.styles.listItem}}")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconCommentsEmpty}}", ng-if="$ctrl.isNotificationEmpty")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconCommentsUnread}}", ng-if="$ctrl.isNotificationUnread")
+          span Comments
+          span 13
+      md-list-item.md-2-line(ng-click='null')
+        div(class="{{::$ctrl.styles.listItem}}")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconNotificationEmpty}}", ng-if="$ctrl.isNotificationEmpty")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconNotificationUnread}}", ng-if="$ctrl.isNotificationUnread")
+          span Notification
+          span 2
+      md-list-item.md-2-line(ng-click='null')
+        div(class="{{::$ctrl.styles.listItem}}")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconLikeEmpty}}", ng-if="$ctrl.isNotificationEmpty")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconLikeUnread}}", ng-if="$ctrl.isNotificationUnread")
+          span Likes
+          span 34
+      md-list-item.md-2-line(ng-click='null')
+        div(class="{{::$ctrl.styles.listItem}}")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconFollowerEmpty}}", ng-if="$ctrl.isNotificationEmpty")
+          i(class="{{::$ctrl.styles.iconStyle}} {{::$ctrl.styles.iconFollowerUnread}}", ng-if="$ctrl.isNotificationUnread")
+          span Followers
+          span 112
