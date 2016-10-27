@@ -12,8 +12,7 @@ module.exports = {
   devtool: isLocal ? 'inline-source-map' : undefined,
   context: srcRoot,
   resolve: {
-    extensions: ['', '.js'],
-    root: srcRoot
+    extensions: ['.js']
   },
   entry: {
     app: './index.js',
@@ -26,14 +25,13 @@ module.exports = {
   },
   cache: isLocal,
   module: {
-    preLoaders: [
+    loaders: [
       {
         test: /\.js$/,
         loader: 'eslint-loader',
-        include: [srcRoot]
-      }
-    ],
-    loaders: [
+        include: [srcRoot],
+        enforce: 'pre'
+      },
       { // Babel loader
         test: /\.js$/,
         loader: 'babel-loader',
@@ -111,28 +109,32 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: 'body'
-    })
-  ],
-  eslint: {
-    emitError: true,
-    emitWarning: true,
-    failOnError: false,
-    configFile: path.resolve(projectRoot, '.eslintrc')
-  },
-  htmlLoader: {
-    minimize: true
-  },
-  postcss: [
-    require('postcss-inline-svg')({
-      path: 'src/assets/icons',
-      encode: false
     }),
-    require('postcss-svgo')()
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        eslint: {
+          emitError: true,
+          emitWarning: true,
+          failOnError: false,
+          configFile: path.resolve(projectRoot, '.eslintrc')
+        },
+        htmlLoader: {
+          minimize: true
+        },
+        postcss: [
+          require('postcss-inline-svg')({
+            path: 'src/assets/icons',
+            encode: false
+          }),
+          require('postcss-svgo')()
+        ]
+      }
+    })
   ],
   node: {
     fs: 'empty',
-    global: 'window',
-    process: 'empty',
+    global: true,
+    process: false,
     crypto: 'empty',
     module: false,
     clearImmediate: false,
