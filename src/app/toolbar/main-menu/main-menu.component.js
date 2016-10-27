@@ -1,5 +1,5 @@
 class MainMenuComponent {
-
+  styles = require('./main-menu.component.scss');
   constructor($mdSidenav) {
     this.$mdSidenav = $mdSidenav;
   }

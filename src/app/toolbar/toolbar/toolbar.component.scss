@@ -1,0 +1,38 @@
+@import "../../../assets/parts/toolbar/toolbar/icons";
+@import "../../../assets/parts/common/icons";
+
+.icon-notification {
+  &--disabled {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-notification-disabled--white);
+      opacity: 0.87;
+    }
+  }
+  &--unread {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-notification-unread--white);
+      opacity: 0.87;
+    }
+  }
+  &--empty {
+    @extend %svg-icon;
+
+    &:before {
+      background: svg-inline(icon-notification-empty--white);
+      opacity: 0.87;
+    }
+  }
+}
+
+.icon-menu {
+  @extend %svg-icon;
+  &:before {
+    background: svg-inline(icon-menu--white);
+    opacity: 0.87;
+  }
+}
+

@@ -1,13 +1,13 @@
 md-toolbar.md-hue-2
   .md-toolbar-tools
     md-button.md-icon-button(ng-click='$ctrl.toggleMenu()')
-      i.icon-menu
+      i(class="{{::$ctrl.styles.iconMenu}}")
     h2
       span Toolbar
     span(flex='')
-    md-button.md-icon-button
-        i.icon-notification--empty(ng-if="$ctrl.isNotificationEmpty")
-        i.icon-notification--unread(ng-if="$ctrl.isNotificationUnread")
-        i.icon-notification--disabled(ng-if="$ctrl.isNotificationDisabled")
+    md-button.md-icon-button(ng-click="$ctrl.openNotification()")
+        i(class="{{::$ctrl.styles.iconNotificationEmpty}}", ng-if="$ctrl.isNotificationMenuEmpty")
+        i(class="{{::$ctrl.styles.iconNotificationUnread}}", ng-if="$ctrl.isNotificationMenuUnread")
+        i(class="{{::$ctrl.styles.iconNotificationDisabled}}", ng-if="$ctrl.isNotificationMenuDisabled")
 main-menu
 

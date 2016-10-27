@@ -2,6 +2,6 @@ md-sidenav.md-sidenav-left(md-component-id='menu-left', md-disable-backdrop='', 
   md-toolbar.md-hue-2
     .md-toolbar-tools
       md-button.md-icon-button(ng-click='$ctrl.toggleMenu()')
-        i.icon-back
+        i(class="{{::$ctrl.styles.iconBack}}", )
       h1 Menu toolbar
   md-content(layout-margin='')

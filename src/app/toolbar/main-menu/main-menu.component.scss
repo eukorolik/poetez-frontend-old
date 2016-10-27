@@ -1,0 +1,10 @@
+@import "../../../assets/parts/toolbar/toolbar/icons";
+@import "../../../assets/parts/common/icons";
+
+.icon-back {
+  @extend %svg-icon;
+  &:before {
+    background: svg-inline(icon-back--white);
+    opacity: 0.87;
+  }
+}
